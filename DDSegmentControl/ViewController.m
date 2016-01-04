@@ -6,9 +6,14 @@
 //  Copyright © 2015年 Alex. All rights reserved.
 //
 
-#import "ViewController.h"
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
-@interface ViewController ()
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#import "ViewController.h"
+#import "DDSegmentControl.h"
+
+@interface ViewController ()<UIScrollViewDelegate>
 
 @end
 
@@ -17,7 +22,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *titlesArray=@[@"one",@"two",@"three",@"four"];
+    
+    DDSegmentControl *seg=[[DDSegmentControl alloc]initWithItems:titlesArray];
+    seg.frame=CGRectMake(0, 0, 300, 40);
+    seg.layer.borderWidth=1;
+    seg.layer.cornerRadius=10;
+    [seg addTarget:self action:@selector(segmentIndexChanged:) forControlEvents:UIControlEventValueChanged];
+
+    [self.view addSubview:seg];
+    
+    
+    seg.center=self.view.center;
+ 
+    
+
 }
+
+- (void)segmentIndexChanged:(DDSegmentControl *)seg
+{
+    NSLog(@"%@",@(seg.selectedSegmentIndex));
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

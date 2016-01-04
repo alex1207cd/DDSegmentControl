@@ -10,4 +10,12 @@
 
 @interface DDSegmentControl : UIControl
 
+@property(nonatomic,assign)NSUInteger selectedSegmentIndex;
+@property(nonatomic,strong)UIColor *selectedViewColor;
+@property(nonatomic,strong)UIColor *selectedTextColor;
+@property(nonatomic,strong)UIColor *titlesTextColor;
+
+
+-(instancetype)initWithItems:(NSArray *)items;
+
 @end

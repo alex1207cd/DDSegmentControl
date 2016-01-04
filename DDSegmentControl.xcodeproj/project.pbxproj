@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA94F95D1C3260C0006D39B9 /* DDSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FA94F95C1C3260C0006D39B9 /* DDSegmentControl.m */; };
 		FA9A02111C311188009E7531 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A02101C311188009E7531 /* main.m */; };
 		FA9A02141C311188009E7531 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A02131C311188009E7531 /* AppDelegate.m */; };
 		FA9A02171C311188009E7531 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A02161C311188009E7531 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA94F95B1C3260C0006D39B9 /* DDSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSegmentControl.h; sourceTree = "<group>"; };
+		FA94F95C1C3260C0006D39B9 /* DDSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSegmentControl.m; sourceTree = "<group>"; };
 		FA9A020C1C311188009E7531 /* DDSegmentControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDSegmentControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9A02101C311188009E7531 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA9A02121C311188009E7531 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		FA9A020E1C311188009E7531 /* DDSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
+				FAEE48DA1C3A6181005CEA1D /* DDSegmentControl */,
 				FA9A02121C311188009E7531 /* AppDelegate.h */,
 				FA9A02131C311188009E7531 /* AppDelegate.m */,
 				FA9A02151C311188009E7531 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				FA9A02361C311188009E7531 /* Info.plist */,
 			);
 			path = DDSegmentControlUITests;
+			sourceTree = "<group>";
+		};
+		FAEE48DA1C3A6181005CEA1D /* DDSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				FA94F95B1C3260C0006D39B9 /* DDSegmentControl.h */,
+				FA94F95C1C3260C0006D39B9 /* DDSegmentControl.m */,
+			);
+			name = DDSegmentControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9A02171C311188009E7531 /* ViewController.m in Sources */,
+				FA94F95D1C3260C0006D39B9 /* DDSegmentControl.m in Sources */,
 				FA9A02141C311188009E7531 /* AppDelegate.m in Sources */,
 				FA9A02111C311188009E7531 /* main.m in Sources */,
 			);
@@ -501,6 +515,7 @@
 				FA9A023B1C311188009E7531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA9A023C1C311188009E7531 /* Build configuration list for PBXNativeTarget "DDSegmentControlTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +524,7 @@
 				FA9A023E1C311188009E7531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA9A023F1C311188009E7531 /* Build configuration list for PBXNativeTarget "DDSegmentControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +533,7 @@
 				FA9A02411C311188009E7531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
