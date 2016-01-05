@@ -30,13 +30,10 @@
     seg.layer.borderWidth=1;
     seg.layer.cornerRadius=10;
     [seg addTarget:self action:@selector(segmentIndexChanged:) forControlEvents:UIControlEventValueChanged];
-
     [self.view addSubview:seg];
     
     
     seg.center=self.view.center;
- 
-    
 
 }
 
