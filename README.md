@@ -3,7 +3,7 @@
 
 ![demo gif](https://github.com/alex1207cd/DDSegmentControl/blob/master/cd.gif?raw=true)
 
-
+#使用方法
 	NSArray *titlesArray=@[@"one",@"two",@"three",@"four"];
     
     DDSegmentControl *seg=[[DDSegmentControl alloc]initWithItems:titlesArray];
@@ -18,3 +18,7 @@
 	{
     	NSLog(@"%@",@(seg.selectedSegmentIndex));
 	}
+	
+	
+###有问题请联系本人：
+###Email：59982435@qq.com
