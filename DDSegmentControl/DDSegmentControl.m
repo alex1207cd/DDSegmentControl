@@ -76,7 +76,27 @@
     self.layer.masksToBounds=YES;
     self.userInteractionEnabled=YES;
     
+    
+    _selectedView=[[UIView alloc]init];
+    [self addSubview:_selectedView];
+    
+    _titlesView=[[UIView alloc]init];
+    [self addSubview:_titlesView];
+    
+    
+    _DDmaskView=[[UIView alloc]init];
+    [self addSubview:_DDmaskView];
+    
+    _maskColorView=[[UIView alloc]init];
+    [_DDmaskView addSubview:_maskColorView];
+    
 }
+
+-(NSUInteger)numberOfSegments
+{
+    return _titlesArray.count;
+}
+
 - (void)setSelectedSegmentIndex:(NSUInteger)selectedSegmentIndex
 {
     _selectedSegmentIndex=selectedSegmentIndex;
@@ -118,15 +138,19 @@
     CGFloat const titleWidth=self.bounds.size.width/_titlesArray.count;
     CGFloat const titleHeight=self.bounds.size.height;
     
-    _selectedView=[[UIView alloc]init];
+ 
     _selectedView.frame=CGRectMake(_selectedSegmentIndex*titleWidth, 0, titleWidth, titleHeight);
     _selectedView.backgroundColor=_selectedViewColor;
     _selectedView.userInteractionEnabled=YES;
-    [self addSubview:_selectedView];
     
-    _titlesView=[[UIView alloc]init];
-    _titlesView.frame=self.bounds;
-    [self addSubview:_titlesView];
+    
+      _titlesView.frame=self.bounds;
+  
+    if (_titlesView.subviews.count>0) {
+        for (UIView *view in _titlesView.subviews) {
+            [view removeFromSuperview];
+        }
+    }
     
     for (NSUInteger i=0; i<_titlesArray.count; i++) {
         UILabel *label=[[UILabel alloc]init];
@@ -137,14 +161,11 @@
         [_titlesView addSubview:label];
     }
     
-    _DDmaskView=[[UIView alloc]init];
-    _DDmaskView.frame=self.bounds;
-    [self addSubview:_DDmaskView];
+      _DDmaskView.frame=self.bounds;
+   
     
-    _maskColorView=[[UIView alloc]init];
-    _maskColorView.frame=CGRectMake(_selectedSegmentIndex*titleWidth, 0, titleWidth, titleHeight);
+      _maskColorView.frame=CGRectMake(_selectedSegmentIndex*titleWidth, 0, titleWidth, titleHeight);
     _maskColorView.backgroundColor=_selectedTextColor;
-    [_DDmaskView addSubview:_maskColorView];
     
     
     _maskImage=[self creatImageWithView:_titlesView];

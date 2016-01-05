@@ -14,7 +14,7 @@
 @property(nonatomic,strong)UIColor *selectedViewColor;
 @property(nonatomic,strong)UIColor *selectedTextColor;
 @property(nonatomic,strong)UIColor *titlesTextColor;
-
+@property(nonatomic,readonly) NSUInteger numberOfSegments;
 
 -(instancetype)initWithItems:(NSArray *)items;
 

@@ -32,8 +32,10 @@
     [seg addTarget:self action:@selector(segmentIndexChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:seg];
     
-    
     seg.center=self.view.center;
+    
+    
+    NSLog(@"%@",@(seg.numberOfSegments));
 
 }
 
