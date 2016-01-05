@@ -182,10 +182,8 @@
     newCenterX = MIN(newCenterX, self.bounds.size.width - _selectedView.bounds.size.width/2);
     newCenterX = MAX(newCenterX, _selectedView.bounds.size.width/2);
     
-   
     CGPoint newCenter = CGPointMake(newCenterX, self.bounds.size.height/2);
   
-    
     [self sliderSelectedViewToPoint:newCenter];
 }
 
@@ -211,8 +209,8 @@
 {
 
     NSUInteger endIndex=_lastMovePoint.x/(self.bounds.size.width/_titlesArray.count);
-    
-    if (endIndex!=_selectedSegmentIndex&&endIndex<_titlesArray.count) {
+    endIndex=endIndex<_titlesArray.count? endIndex:_titlesArray.count-1;
+    if (endIndex!=_selectedSegmentIndex) {
         _selectedSegmentIndex=endIndex;
         [self sendActionsForControlEvents:UIControlEventValueChanged];
     }
